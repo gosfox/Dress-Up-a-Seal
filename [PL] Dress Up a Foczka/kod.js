@@ -85,13 +85,7 @@ function toASCII(str) {
     .replace(/[^\x00-\x7F]/g, "");
 }
 
-// V ID V
-//public EZAqV4CqWc-LL8P3J
-//service_id service_pguo61h
-//template_id template_qxn2anj
-
 // V POBIERANIE V
-//emailjs.init("EZAqV4CqWc-LL8P3J");
 
 function wyslij(){
   console.log("klik działa");
@@ -132,73 +126,6 @@ function wyslij(){
 
   });
 }
-
-/*
-function wyslij() {
-  console.log("klik działa");
-
-  const email = document.getElementById("email").value;
-  const foczka = document.getElementById("foczka");
-  let imie = document.getElementById("imie").value.trim();
-  imie = toASCII(imie);
-  if (!imie) imie = "foczka";
-
-  html2canvas(foczka, {
-    backgroundColor: "#d9f2ff",
-  }).then(canvas => {
-
-    const cropped = cropCanvas(canvas);
-    const base64 = cropped.toDataURL("image/jpeg", 0.75);
-
-    //1. Zapis na komputer
-    const link = document.createElement("a");
-    link.download = `foczka_${imie}.png`;
-    link.href = base64;
-    link.click();
-
-    //2. Wysyłanie maila
-    emailjs.send("service_pguo61h", "template_qxn2anj", {
-      image: base64,
-      name: imie,
-      email: email
-    })
-    .then(() => {
-      alert("Wysłano foczkę!");
-      
-    })
-    .catch(err => {
-      console.error("EMAIL ERROR:", err);
-      alert("Błąd wysyłania");
-    });
-
-  });
-}
-*/
-
-/*
-function wyslij() {
-  const file = document.getElementsByName("screen")[0].files[0];
-
-  const reader = new FileReader();
-
-  reader.onload = function () {
-    const base64 = reader.result;
-
-    emailjs.send("service_pguo61h", "template_qxn2anj", {
-      image: base64,
-      name: imie
-    })
-    .then(() => {
-      alert(`Wysłano!`);
-    })
-    .catch(err => {
-      console.error(err);
-    });
-  };
-
-  reader.readAsDataURL(file);
-}
-*/
 // ======================================================
 
 
