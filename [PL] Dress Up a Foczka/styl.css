@@ -1,0 +1,299 @@
+/* Główne */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    user-select: none;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background:linear-gradient(180deg,#f4fbff,#dff2ff,#cbe9ff);
+    color:#102030;
+    min-height:100vh;
+    display:grid;
+    grid-template-rows:auto 1fr auto auto;
+    grid-template-columns:260px 1fr;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "section section"
+        "footer footer";
+}
+
+header{
+    background-color: #0d2236;
+    color:white;
+    font-size:1.4rem;
+    letter-spacing:1px;
+    border-bottom:3px solid #79caff;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.gradient{
+    float: left;
+    width: 25%;
+    height: auto;
+    display: block;
+    opacity: 0.8;
+    filter: hue-rotate(-80deg)
+}
+
+header h1{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    left: 90px;
+}
+
+header h2{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    left: 73%;
+    background-color: #2c5e92;
+    padding: 10px;
+    border-radius:8px;
+    box-shadow:#051930 -2px 1px 1px;
+}
+
+.gradient:nth-child(even){
+    transform: scaleX(-1);
+}
+
+#petseal{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4%;
+    z-index: 2;
+    
+}
+
+header{ grid-area:header; }
+aside{ grid-area:aside; }
+main{ grid-area:main; }
+section{ grid-area:section; }
+footer{ grid-area:footer; }
+
+aside{
+    background:linear-gradient(
+    180deg,
+    #1b3655,
+    #24486f
+    );
+    padding:15px;
+    overflow-y:auto;
+    border-right:3px solid #79caff;
+    color:white;
+    height:808px;
+}
+
+aside div{ margin-bottom:14px; }
+
+aside h3{
+    cursor:pointer;
+    background:#2c5e92;
+    padding:8px 15px;
+    padding-left: 20px;
+    border-radius:10px;
+    font-size:1rem;
+    letter-spacing:.4px;
+    transition:all .2s;
+    text-align: right;
+    box-shadow:#051930 -2px 1px 1px;
+}
+
+aside h3:hover{
+    background:#7fd4ff;
+    color:#0d2236;
+    transform:translateX(-2px);
+}
+
+
+/* Formularze */
+aside form{
+    margin-top:6px;
+    padding:8px;
+    background:rgba(255,255,255,.06);
+    border-radius:8px;
+    animation:fadeIn .2s ease;
+    box-shadow:#051930 -2px 1px 1px;
+}
+
+aside label{
+    display:block;
+    cursor:pointer;
+    opacity:.9;
+    transition:.15s;
+    text-shadow: #4c6787 2px 2px 2px;
+}
+
+aside label:hover{ opacity:1; }
+
+.ikony{
+    width: 20%;
+    float: left;
+    background-color: #2c5e92;
+    border-radius: 20px;
+    padding: 5px;
+    position: relative;
+    top: -4px;
+    box-shadow:#051930 -2px 1px 1px;
+}
+
+
+
+/* Główny blok */
+
+main{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: radial-gradient(circle at center,#e9f8ff,#d8efff);
+    border-left:1px solid rgba(0,0,0,.08);
+    height: 808px;
+}
+
+
+
+/* Mail*/
+
+section{
+    background:#1c3553;
+    color:white;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    border-top:3px solid #79caff;
+}
+
+section form{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+/* Inputy */
+
+input,
+textarea{
+    border:none;
+    border-radius:6px;
+    padding:6px 8px;
+}
+
+
+/* Przycisk */
+
+input[type="button"]{
+    background:#7fd4ff;
+    color:#0d2236;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.15s;
+}
+
+input[type="button"]:hover{
+    background:#aee6ff;
+    transform:translateY(-1px);
+}
+
+
+
+/* Footer */
+
+footer{
+    background:#051930;
+    color:#a7cde8;
+    font-size:.8rem;
+    padding:6px 20px;
+    text-align:right;
+}
+
+
+
+/* Animacje */
+
+@keyframes fadeIn{
+    from{
+    opacity:0;
+    transform:translateY(-5px);
+    }
+    to{
+    opacity:1;
+    transform:translateY(0);
+    }
+}
+
+
+
+/* Foczka */
+
+#foczka{
+    display: inline-block;
+    position:relative;
+    width:49%;
+    aspect-ratio:1/1;
+    overflow:hidden;
+}
+
+#foczka img{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    pointer-events:none;
+}
+
+#baza{ position:relative; }
+
+
+
+/* Dymek */
+
+#tekstInput{
+    position:absolute;
+    top:21%;
+    left:75%;
+    resize:none;
+    height:145px;
+    width:185px;
+    z-index:67;
+    border-radius:20%;
+    padding:12px;
+    border:none;
+    font-size:150%;
+    background:white;
+    color:black;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#tekstInput:focus{ outline:1px solid #ffffff; }
+
+#tekstRender{
+    position:absolute;
+    top:22%;
+    left:75%;
+    width:175px;
+    height:130px;
+    z-index:67;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    font-size:100%;
+    color:black;
+}
