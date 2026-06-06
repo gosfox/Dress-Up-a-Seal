@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Up a Seal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--I was too lazy to translate ALL classes, id's and images, so I'm only translating functions and display text, if anyone wants to do it, feel free, I'm too lazy-->
+
+    <header>
+        <img src="prplgradient.gif" alt="gradient" class="gradient">
+        <img src="prplgradient.gif" alt="gradient" class="gradient">
+        <img src="prplgradient.gif" alt="gradient" class="gradient">
+        <img src="prplgradient.gif" alt="gradient" class="gradient">
+        <img src="petseal.gif" alt="Pet seal" id="petseal">
+        <h1>Dress Up a Seal</h1>
+        <h2>Happy Kyuing</h2>
+    </header>
+    <aside>
+        <div>
+            <h3 onclick="toggleSection('formbaza', 0, '<img src=\'Img/Ikony/baza.png\' class=\'ikony\'> Baza');"><img src="Img/Ikony/baza.png" class="icons"> Base &#8963;</h3>
+            <form id="formbaza">
+                <label>White <input type='radio' value='biala' name='bazaOpt' class='opt' onclick="baseSelect(0);"></label><br>
+                <label>Grey <input checked class="checked" type='radio' value='szara' name='bazaOpt' class='opt' onclick="baseSelect(1);"></label><br>
+                <label>Dark grey <input type='radio' value='ciemnoszara' name='bazaOpt' class='opt' onclick="baseSelect(2);"></label><br>
+                <label>Black <input type='radio' value='czarna' name='bazaOpt' class='opt' onclick="baseSelect(3);"></label><br>
+            </form>
+        </div>
+        <div>
+            <h3 onclick="toggleSection('formakces', 1, '<img src=\'Img/Ikony/akcesoria.png\' class=\'ikony\'> Akcesoria');"><img src='Img/Ikony/akcesoria.png' class="icons"> Accesories &#8964;</h3>
+            <form id="formakces" hidden>
+                <label>Bow-tie <input type='checkbox' value='muszka' name='akcesOpt' class='opt'></label><br>
+                <label>Tie <input type='checkbox' value='krawat' name='akcesOpt' class='opt'></label><br>
+                <label>Necklace <input type='checkbox' value='naszyjnik' name='akcesOpt' class='opt'></label><br>
+                <label>Brooch <input type='checkbox' value='broszka' name='akcesOpt' class='opt'></label><br>
+                <label>RUffle <input type='checkbox' value='zabot' name='akcesOpt' class='opt'></label><br>
+                <label>Bows <input type='checkbox' value='kokardki' name='akcesOpt' class='opt'></label><br>
+                <label>Glasses <input type='checkbox' value='okulary' name='akcesOpt' class='opt'></label><br>
+                <label>Rose <input type='checkbox' value='roza' name='akcesOpt' class='opt'></label><br>
+                <label>Mask <input type='checkbox' value='maska' name='akcesOpt' class='opt'></label><br>
+                <label>Sunflower <input type='checkbox' value='slonecznik' name='akcesOpt' class='opt'></label><br>
+                <label>Wings <input type='checkbox' value='skrzydla' name='akcesOpt' class='opt'></label><br>
+                <label>Demon tail <input type='checkbox' value='diabelogon' name='akcesOpt' class='opt'></label><br>
+            </form>
+        </div>
+        <div>
+            <h3 onclick="toggleSection('formczapki', 2, '<img src=\'Img/Ikony/czapki.png\' class=\'ikony\'> Czapki');"><img src="Img/Ikony/czapki.png" class="icons"> Hats &#8964;</h3>
+            <form id="formczapki" hidden>
+                <label>Fedora <input type='radio' value='fedora' name='czapkaOpt' class='opt'></label><br>
+                <label>Cap <input type='radio' value='daszek' name='czapkaOpt' class='opt'></label><br>
+                <label>Party <input type='radio' value='imprezowa' name='czapkaOpt' class='opt'></label><br>
+                <label>Bow <input type='radio' value='kokarda' name='czapkaOpt' class='opt'></label><br>
+                <label>Cat ears <input type='radio' value='kocieuszy' name='czapkaOpt' class='opt'></label><br>
+                <label>Beret <input type='radio' value='beret' name='czapkaOpt' class='opt'></label><br>
+                <label>Horns <input type='radio' value='rogi' name='czapkaOpt' class='opt'></label><br>
+                <label>Crown <input type='radio' value='korona' name='czapkaOpt' class='opt'></label><br>
+                <label>Kids' <input type='radio' value='dziecieca' name='czapkaOpt' class='opt'></label><br>
+                <label>Headphones <input type='radio' value='sluchawki' name='czapkaOpt' class='opt'></label><br>
+                <label>Halo <input type='radio' value='aureola' name='czapkaOpt' class='opt'></label><br>
+                <label>Sun <input type='radio' value='slonce' name='czapkaOpt' class='opt'></label><br>
+                <label>Hare ears <input type='radio' value='zajac' name='czapkaOpt' class='opt'></label><br>
+                <label>Demon horns <input type='radio' value='diabelrogi' name='czapkaOpt' class='opt'></label><br>
+                <label>None <input checked class="checked" type='radio' value='brak' name='czapkaOpt' class='opt'></label><br>
+            </form>
+        </div>
+        <div>
+            <h3 onclick="toggleSection('formczapki2', 3, '<img src=\'Img/Ikony/czapki.png\' class=\'ikony\'> Czapki 2');"><img src="Img/Ikony/czapki.png" class="icons"> Hats 2 &#8964;</h3>
+            <form id="formczapki2" hidden>
+                <label>Fedora <input type='radio' value='fedora2' name='czapka2Opt' class='opt'></label><br>
+                <label>Cap <input type='radio' value='daszek2' name='czapka2Opt' class='opt'></label><br>
+                <label>Party <input type='radio' value='imprezowa2' name='czapka2Opt' class='opt'></label><br>
+                <label>Bow <input type='radio' value='kokarda2' name='czapka2Opt' class='opt'></label><br>
+                <label>Cat ears <input type='radio' value='kocieuszy2' name='czapka2Opt' class='opt'></label><br>
+                <label>Beret <input type='radio' value='beret2' name='czapka2Opt' class='opt'></label><br>
+                <label>Horns <input type='radio' value='rogi2' name='czapka2Opt' class='opt'></label><br>
+                <label>Crown <input type='radio' value='korona2' name='czapka2Opt' class='opt'></label><br>
+                <label>Kids' <input type='radio' value='dziecieca2' name='czapka2Opt' class='opt'></label><br>
+                <label>Headphones <input type='radio' value='sluchawki2' name='czapka2Opt' class='opt'></label><br>
+                <label>Halo <input type='radio' value='aureola2' name='czapka2Opt' class='opt'></label><br>
+                <label>Sun <input type='radio' value='slonce2' name='czapka2Opt' class='opt'></label><br>
+                <label>Hare ears <input type='radio' value='zajac2' name='czapka2Opt' class='opt'></label><br>
+                <label>Demon horns <input type='radio' value='diabelrogi2' name='czapka2Opt' class='opt'></label><br>
+                <label>None <input checked class="checked" type='radio' value='brak2' name='czapka2Opt' class='opt'></label><br>
+            </form>
+        </div>
+        <div>
+            <h3 onclick="toggleSection('formlewapl', 4, '<img src=\'Img/Ikony/propsy.png\' class=\'ikony\'> Lewa płetwa');"><img src="Img/Ikony/propsy.png" class="icons"> Left fin &#8964;</h3>
+            <form id="formlewapl" hidden>
+                <label>Sauce <input type='radio' value='sosdunskil' name='lewaPlOpt' class='opt'></label><br>
+                <label>Fish <input type='radio' value='rybal' name='lewaPlOpt' class='opt'></label><br>
+                <label>Wand <input type='radio' value='rozdzkal' name='lewaPlOpt' class='opt'></label><br>
+                <label>Pizza <input type='radio' value='pizzal' name='lewaPlOpt' class='opt'></label><br>
+                <label>Book <input type='radio' value='ksiazkal' name='lewaPlOpt' class='opt'></label><br>
+                <label>Mug <input type='radio' value='kubekl' name='lewaPlOpt' class='opt'></label><br>
+                <label>Labubu <input type='radio' value='labubul' name='lewaPlOpt' class='opt'></label><br>
+                <label>Lollypop <input type='radio' value='lizakl' name='lewaPlOpt' class='opt'></label><br>
+                <label>Phone <input type='radio' value='telefonl' name='lewaPlOpt' class='opt'></label><br>
+                <label>Balloon <input type='radio' value='balonl' name='lewaPlOpt' class='opt'></label><br>
+                <label>Microphone <input type='radio' value='mikrofonl' name='lewaPlOpt' class='opt'></label><br>
+                <label>None <input checked class="checked" type='radio' value='brak' name='lewaPlOpt' class='opt'></label><br>
+            </form>
+        </div>
+        <div>
+            <h3 onclick="toggleSection('formprawapl', 5, '<img src=\'Img/Ikony/propsy.png\' class=\'ikony\'> Prawa płetwa');"><img src='Img/Ikony/propsy.png' class='icons'> Right fin &#8964;</h3>
+            <form id="formprawapl" hidden>
+                <label>Sauce <input type='radio' value='sosdunskip' name='prawaPlOpt' class='opt'></label><br>
+                <label>Fish <input type='radio' value='rybap' name='prawaPlOpt' class='opt'></label><br>
+                <label>Wand <input type='radio' value='rozdzkap' name='prawaPlOpt' class='opt'></label><br>
+                <label>Pizza <input type='radio' value='pizzap' name='prawaPlOpt' class='opt'></label><br>
+                <label>Book <input type='radio' value='ksiazkap' name='prawaPlOpt' class='opt'></label><br>
+                <label>Mug <input type='radio' value='kubekp' name='prawaPlOpt' class='opt'></label><br>
+                <label>Labubu <input type='radio' value='labubup' name='prawaPlOpt' class='opt'></label><br>
+                <label>Lollypop <input type='radio' value='lizakp' name='prawaPlOpt' class='opt'></label><br>
+                <label>Phone <input type='radio' value='telefonp' name='prawaPlOpt' class='opt'></label><br>
+                <label>Balloon <input type='radio' value='balonp' name='prawaPlOpt' class='opt'></label><br>
+                <label>Microphone <input type='radio' value='mikrofonp' name='prawaPlOpt' class='opt'></label><br>
+                <label>None <input checked class="checked" type='radio' value='brak' name='prawaPlOpt' class='opt'></label><br>
+            </form>
+        </div>
+        <div>
+            <h3 onclick="toggleSection('formefekt', 6, '<img src=\'Img/Ikony/efekty.png\' class=\'ikony\'> Efekty');"><img src="Img/Ikony/efekty.png" class="icons"> Effects &#8964;</h3>
+            <form id="formefekt" hidden>
+                <label>Stars <input type='checkbox' value='gwiazdki' name='efektOpt' class='opt'></label><br>
+                <label>Hearts <input type='checkbox' value='serduszka' name='efektOpt' class='opt'></label><br>
+                <label>Orbit <input type='checkbox' value='orbita' name='efektOpt' class='opt'></label><br>
+                <label>Text bubble <input type='checkbox' value='dymek' name='efektOpt' class='opt'></label><br>
+            </form>
+        </div>
+    </aside>
+    <main>
+        <div id="foczka">
+            <!--Suns-->
+            <img src="Img/Czapki/slonce.png" hidden id="slonce" class="czapka">
+            <img src="Img/Czapki/slonce.png" hidden id="slonce2" class="czapka2">
+
+            <!--Base-->
+            <img src="Img/Baza/szara.png" id="baza">
+
+            <!--Lineart-->
+            <img src="Img/lineart.gif" id="lineart">
+
+            <!--Wings-->
+            <img src="Img/Akcesoria/skrzydla.png" hidden id="skrzydla">
+
+            <!--Horns, kids', headphones-->
+            <img src="Img/Czapki/rogi.png" hidden id="rogi" class="czapka">
+            <img src="Img/Czapki/rogi.png" hidden id="rogi2" class="czapka2">
+            <img src="Img/Czapki/dziecieca.png" hidden id="dziecieca" class="czapka">
+            <img src="Img/Czapki/dziecieca.png" hidden id="dziecieca2" class="czapka2">
+            <img src="Img/Czapki/sluchawki.png" hidden id="sluchawki" class="czapka">
+            <img src="Img/Czapki/sluchawki.png" hidden id="sluchawki2" class="czapka2">
+
+            <!--Accesories-->
+            <img src="Img/Akcesoria/diabelogon.png" hidden id="diabelogon">
+            <img src="Img/Akcesoria/maska.png" hidden id="maska">
+            <img src="Img/Akcesoria/slonecznik.png" hidden id="slonecznik">
+            <img src="Img/Akcesoria/zabot.png" hidden id="zabot">
+            <img src="Img/Akcesoria/muszka.png" hidden id="muszka">
+            <img src="Img/Akcesoria/krawat.png" hidden id="krawat">
+            <img src="Img/Akcesoria/naszyjnik.png" hidden id="naszyjnik">
+            <img src="Img/Akcesoria/broszka.png" hidden id="broszka">
+            <img src="Img/Akcesoria/kokardki.png" hidden id="kokardki">
+            <img src="Img/Akcesoria/okulary.png" hidden id="okulary">
+            <img src="Img/Akcesoria/roza.png" hidden id="roza">
+
+            <!--Hats-->
+            <img src="Img/Czapki/zajac.png" hidden id="zajac" class="czapka">
+            <img src="Img/Czapki/diabelrogi.png" hidden id="diabelrogi" class="czapka">
+            <img src="Img/Czapki/kocieuszy.png" hidden id="kocieuszy" class="czapka">
+            <img src="Img/Czapki/imprezowa.png" hidden id="imprezowa" class="czapka">
+            <img src="Img/Czapki/korona.png" hidden id="korona" class="czapka">
+            <img src="Img/Czapki/fedora.png" hidden id="fedora" class="czapka">
+            <img src="Img/Czapki/daszek.png" hidden id="daszek" class="czapka">
+            <img src="Img/Czapki/kokarda.png" hidden id="kokarda" class="czapka">
+            <img src="Img/Czapki/beret.png" hidden id="beret" class="czapka">
+            <img src="Img/Czapki/aureola.png" hidden id="aureola" class="czapka">
+
+            <!--Hats 2-->
+            <img src="Img/Czapki/zajac.png" hidden id="zajac2" class="czapka2">
+            <img src="Img/Czapki/diabelrogi.png" hidden id="diabelrogi2" class="czapka2">
+            <img src="Img/Czapki/kocieuszy.png" hidden id="kocieuszy2" class="czapka2">
+            <img src="Img/Czapki/imprezowa.png" hidden id="imprezowa2" class="czapka2">
+            <img src="Img/Czapki/korona.png" hidden id="korona2" class="czapka2">
+            <img src="Img/Czapki/fedora.png" hidden id="fedora2" class="czapka2">
+            <img src="Img/Czapki/daszek.png" hidden id="daszek2" class="czapka2">
+            <img src="Img/Czapki/kokarda.png" hidden id="kokarda2" class="czapka2">
+            <img src="Img/Czapki/beret.png" hidden id="beret2" class="czapka2">
+            <img src="Img/Czapki/aureola.png" hidden id="aureola2" class="czapka2">            
+
+            <!--Left fin-->
+            <img src="Img/LewaPletwa/sosdunskil.png" hidden id="sosdunskil" class="pletwal">
+            <img src="Img/LewaPletwa/rybal.png" hidden id="rybal" class="pletwal">
+            <img src="Img/LewaPletwa/rozdzkal.png" hidden id="rozdzkal" class="pletwal">
+            <img src="Img/LewaPletwa/pizzal.png" hidden id="pizzal" class="pletwal">
+            <img src="Img/LewaPletwa/ksiazkal.png" hidden id="ksiazkal" class="pletwal">
+            <img src="Img/LewaPletwa/kubekl.png" hidden id="kubekl" class="pletwal">
+            <img src="Img/LewaPletwa/labubul.png" hidden id="labubul" class="pletwal">
+            <img src="Img/LewaPletwa/lizakl.png" hidden id="lizakl" class="pletwal">
+            <img src="Img/LewaPletwa/telefonl.png" hidden id="telefonl" class="pletwal">
+            <img src="Img/LewaPletwa/balonl.png" hidden id="balonl" class="pletwal">
+            <img src="Img/LewaPletwa/mikrofonl.png" hidden id="mikrofonl" class="pletwal">
+
+            <!--Right fin-->
+            <img src="Img/PrawaPletwa/sosdunskip.png" hidden id="sosdunskip" class="pletwap">
+            <img src="Img/PrawaPletwa/rybap.png" hidden id="rybap" class="pletwap">
+            <img src="Img/PrawaPletwa/rozdzkap.png" hidden id="rozdzkap" class="pletwap">
+            <img src="Img/PrawaPletwa/pizzap.png" hidden id="pizzap" class="pletwap">
+            <img src="Img/PrawaPletwa/ksiazkap.png" hidden id="ksiazkap" class="pletwap">
+            <img src="Img/PrawaPletwa/kubekp.png" hidden id="kubekp" class="pletwap">
+            <img src="Img/PrawaPletwa/labubup.png" hidden id="labubup" class="pletwap">
+            <img src="Img/PrawaPletwa/lizakp.png" hidden id="lizakp" class="pletwap">
+            <img src="Img/PrawaPletwa/telefonp.png" hidden id="telefonp" class="pletwap">
+            <img src="Img/PrawaPletwa/balonp.png" hidden id="balonp" class="pletwap">
+            <img src="Img/PrawaPletwa/mikrofonp.png" hidden id="mikrofonp" class="pletwap">
+
+            <!--Effects-->
+            <img src="Img/Efekty/gwiazdki.png" hidden id="gwiazdki">
+            <img src="Img/Efekty/serduszka.png" hidden id="serduszka">
+            <img src="Img/Efekty/orbita.png" hidden id="orbita">
+            <img src="Img/Efekty/dymek.png" hidden id="dymek"> 
+
+            <!--Text-->
+            <textarea placeholder="Write something..." hidden id="tekstInput" spellcheck="false"></textarea>
+            <div hidden id="tekstRender"></div>
+        </div>
+    </main>
+    <section>
+        <h3>Save seal on mail:</h3>
+        <h5>*Seals save locally with its name and email destination*</h5>
+        <form>
+            <label>Seals name: <input id="imie" name="imie"></label>
+            <!--<label>Plik (screen): <input type="file" name="screen"></label>-->
+            <label>Email: <input type="email" name="email" id="email"></label>
+            <input type="button" value="Zapisz" onclick="send();">
+        </form>
+    </section>
+    <footer>Author: Małgorzata Zych, #1 seal fan</footer>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> -->
+    <script src="html2canvas.min.js"></script> <!--Img-->
+    <script src="code.js"></script>
+</body>
+</html>
